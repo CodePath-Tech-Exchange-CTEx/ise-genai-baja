@@ -14,23 +14,96 @@ from folium.plugins import MarkerCluster
 
 # ---------------------------------------------------------------------------
 # Duke University campus center  (~36.0015° N, 78.9391° W)
+# Use West Campus / Chapel coordinates as a central anchor.
 # ---------------------------------------------------------------------------
-CAMPUS_CENTER = [36.001465, -78.939133]
+CAMPUS_CENTER = [36.0016639, -78.9398111]
+
 
 # ---------------------------------------------------------------------------
 # Building data — Duke University West Campus landmarks
+# (coordinates updated to higher-precision values where available)
 # ---------------------------------------------------------------------------
 BUILDINGS = [
-    {"id": 1,  "name": "Perkins & Bostock Libraries", "lat": 36.0019, "lon": -78.9388, "type": "study"},
-    {"id": 2,  "name": "Bryan Center",                "lat": 36.0009, "lon": -78.9410, "type": "dining"},
-    {"id": 3,  "name": "Wilson Recreation Center",    "lat": 36.0005, "lon": -78.9440, "type": "recreation"},
-    {"id": 4,  "name": "Fitzpatrick Center (CIEMAS)", "lat": 36.0017, "lon": -78.9430, "type": "academic"},
-    {"id": 5,  "name": "Duke Chapel",                 "lat": 36.0007, "lon": -78.9389, "type": "academic"},
-    {"id": 6,  "name": "Allen Building",              "lat": 36.0004, "lon": -78.9376, "type": "admin"},
-    {"id": 7,  "name": "Bryan Center Parking Garage", "lat": 36.0006, "lon": -78.9420, "type": "parking"},
-    {"id": 8,  "name": "Cameron Indoor Stadium",      "lat": 35.9979, "lon": -78.9420, "type": "recreation"},
-    {"id": 9,  "name": "Nasher Museum of Art",        "lat": 36.0033, "lon": -78.9406, "type": "academic"},
-    {"id": 10, "name": "Sarah P. Duke Gardens",        "lat": 36.0001, "lon": -78.9400, "type": "recreation"},
+    {
+        "id": 1,
+        "name": "Perkins & Bostock Libraries",
+        # 36°00′07.65″ N, 78°56′19″ W
+        "lat": 36.002125,
+        "lon": -78.938611,
+        "type": "study",
+    },
+    {
+        "id": 2,
+        "name": "Bryan Center",
+        # Mapcarta: 36.001° N, -78.9412° W
+        "lat": 36.001000,
+        "lon": -78.941200,
+        "type": "dining",
+    },
+    {
+        "id": 3,
+        "name": "Wilson Recreation Center",
+        # No better published GPS than the approximate value you had.
+        "lat": 36.0005,
+        "lon": -78.9440,
+        "type": "recreation",
+    },
+    {
+        "id": 4,
+        "name": "Fitzpatrick Center (CIEMAS)",
+        # Wikipedia: 36.003520° N, 78.939599° W
+        "lat": 36.003520,
+        "lon": -78.939599,
+        "type": "academic",
+    },
+    {
+        "id": 5,
+        "name": "Duke Chapel",
+        # Wikipedia: 36.0016639° N, 78.9398111° W
+        "lat": 36.0016639,
+        "lon": -78.9398111,
+        "type": "academic",
+    },
+    {
+        "id": 6,
+        "name": "Allen Building",
+        # Commons camera point: 36°00′03.96″ N, 78°56′16.57″ W
+        "lat": 36.001100,
+        "lon": -78.937936,
+        "type": "admin",
+    },
+    {
+        "id": 7,
+        "name": "Bryan Center Parking Garage",
+        # LatLong.net: 36.0015839, -78.9421350
+        "lat": 36.0015839,
+        "lon": -78.9421350,
+        "type": "parking",
+    },
+    {
+        "id": 8,
+        "name": "Cameron Indoor Stadium",
+        # CoordinatesFinder: 35.997174, -78.9424182
+        "lat": 35.997174,
+        "lon": -78.9424182,
+        "type": "recreation",
+    },
+    {
+        "id": 9,
+        "name": "Nasher Museum of Art",
+        # Wikipedia: 35.9990639° N, 78.9290528° W
+        "lat": 35.9990639,
+        "lon": -78.9290528,
+        "type": "academic",
+    },
+    {
+        "id": 10,
+        "name": "Sarah P. Duke Gardens",
+        # Wikipedia: 36.0018028° N, 78.9334833° W
+        "lat": 36.0018028,
+        "lon": -78.9334833,
+        "type": "recreation",
+    },
 ]
 
 TYPE_COLORS = {
